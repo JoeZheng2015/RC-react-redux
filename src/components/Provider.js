@@ -19,6 +19,8 @@ function warnAboutReceivingStore() {
 }
 
 export default class Provider extends Component {
+  // 虽然Provider定义了
+  // 但子组件并没有定义contextTypes，所以没有用啊
   getChildContext() {
     return { store: this.store }
   }
